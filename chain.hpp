@@ -13,8 +13,8 @@ private:
 public:
   chain(const T1 first, const T2 second) : first(first), second(second)
   {
-    using V1 = const decltype(*first.begin()) &;
-    using V2 = const decltype(*second.begin()) &;
+    using V1 = const decltype(*first.begin()) ;
+    using V2 = const decltype(*second.begin()) ;
   }
   int length () const
   {
