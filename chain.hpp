@@ -30,7 +30,7 @@ public:
     typename T2::iterator second_data;
   
   int counter=0;
-    bool is_sec = false;
+  bool is_sec = false;
 
   public:
   int size = 0;
@@ -61,7 +61,6 @@ public:
       {
         type = *first_data;
         return type;
-        
       }
       type = *second_data;
       return type;

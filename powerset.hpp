@@ -21,15 +21,15 @@ public:
   class iterator
   {
   private:
-     T object;
-     string string_set;
-    int counter = 0;
-    int size ;
+    T object;
+    string string_set; // tostring storage
+    int counter = 0; 
+    int size ; // counter and size for operator !=
     string subset;
     
     void to_string() {
-       stringstream ss;
-       typename T::iterator it  = object.begin();
+      stringstream ss;
+      typename T::iterator it  = object.begin();
       for(int i =0;i<size;i++){
 
       ss << *it;

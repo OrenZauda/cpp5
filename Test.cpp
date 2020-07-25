@@ -32,32 +32,31 @@ int main()
 
 		check=2;
 		testcase.setname("------Chain tests-------");
-		for (int i: chain(range(2,8),range(2,5))){
+		for (int i: chain(range(2,8),range(8,10))){ 
 		testcase.CHECK_EQUAL(check++,i);
-		if(check==7)check=2;
 		}
 		
 		string ch = iterable_to_string( zip(range(5,8), string("abc"))); //5,a 6,b 7,c
 		string t="";
 		testcase.setname("------zip tests-------");
-		for (int i: zip(range(5,8), string("abc"))){
-			t=t+to_string(i);
+		for (string i: zip(range(5,8), string("abc"))){
+			t=t+i+",";
 		}
 		testcase.CHECK_EQUAL(ch,t);
 
 		ch = iterable_to_string( product(range(15,17), string("tc"))); 
 		t="";
 		testcase.setname("------product tests-------");
-		for (int i: product(range(15,17), string("tc"))){
-			t=t+to_string(i);
+		for (string i: product(range(15,17), string("tc"))){
+			t=t+i+",";
 		}
 		testcase.CHECK_EQUAL(ch,t);
 
 		ch = iterable_to_string( powerset(range(-9,-6))); //{-9,-8,-7}
 		t="";
 		testcase.setname("------powerset tests-------");
-		for (int i: powerset(range(-9,-6))){
-			t=t+to_string(i);
+		for (string i: powerset(range(-9,-6))){
+			t=t+i+",";
 		}
 		testcase.CHECK_EQUAL(ch,t);
     grade = testcase.grade();

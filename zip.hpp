@@ -1,4 +1,5 @@
 #include <sstream>
+using namespace std;
 namespace itertools
 {
 
@@ -28,7 +29,7 @@ public:
     typename T2::iterator second_data;
   int size =0;
   int counter =0;
-    bool on_off = false;
+   // bool on_off = false;
 
   public:
     iterator(T1 first_be, T2 second_be) : first_begin(first_be), second_begin(second_be),
@@ -70,7 +71,7 @@ public:
         // Usually iterators are passed by value and not by const& as they are small.
         iterator operator++(int)
         {
-           counter++;
+          counter++;
           iterator tmp = *this;
           ++*this;
           return tmp;

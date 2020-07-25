@@ -28,7 +28,6 @@ public:
     typename T2::iterator second_data;
     
 
-    bool on_off = false;
 
   public:
   
@@ -98,7 +97,7 @@ public:
   {
     
     int size = first.length()*second.length();
-     iterator it{first,second};
+    iterator it{first,second};
     for (size_t i = 0; i < size; i++)
     {
       ++it;

@@ -5,7 +5,7 @@ class range
 {
 private:
   T _start;
-  T _stop;
+  T _stop; 
 
 public:
   range(T start, T stop)
